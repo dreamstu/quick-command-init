@@ -1,0 +1,25 @@
+{
+    "name" : "quick-command-init",
+    "description" : "quick init command.",
+    "version" : "0.0.3",
+    "author" : "QuickJs Team <q@quickjs.org>",
+    "homepage" : "http://q.quickjs.org/",
+    "keywords": [ "q","quick","init" ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dreamstu/quick-command-init.git"
+    },
+    "engines" : {
+        "node" : ">= 0.8.0"
+    },
+    "main" : "install.js",
+    "scripts" : {
+        "test" : "mocha test/ut --recursive"
+    },
+    "dependencies" : {
+        "grunt":"^0.4.5",
+        "grunt-init":"^0.3.2",
+        "win-spawn":"^2.0.0"
+    },
+    "devDependencies": {}
+}
