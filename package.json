@@ -1,7 +1,7 @@
 {
     "name" : "quick-command-init",
     "description" : "quick init command.",
-    "version" : "0.0.3",
+    "version" : "0.0.4",
     "author" : "QuickJs Team <q@quickjs.org>",
     "homepage" : "http://q.quickjs.org/",
     "keywords": [ "q","quick","init" ],
@@ -17,8 +17,14 @@
         "test" : "mocha test/ut --recursive"
     },
     "dependencies" : {
-        "grunt":"^0.4.5",
-        "grunt-init":"^0.3.2",
+        "gulp-template": "~1.1.1",
+        "commander": "~2.5.0",
+        "inquirer": "~0.8.0",
+        "vinyl-fs": "~0.3.13",
+        "empty-dir": "~0.1.0",
+        "semver": "~4.1.0",
+        "whoami": "~0.0.3",
+        "colorful": "~2.1.0",
         "win-spawn":"^2.0.0"
     },
     "devDependencies": {}

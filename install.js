@@ -4,24 +4,19 @@ exports.name = 'init';
 exports.usage = '<names> [options]';
 exports.desc = 'Initialize a module';
 
-exports.register = function(commander,quick){
-
-    commander
+var enter = function(program,quick){
+    program
         .option('-r, --root <path>', 'set serve root')
         .option('-t, --template [value]', 'set template name')
         .option('-u, --upgrade [b]', 'update available template.')
-        .action(function(){
+        .parse(process.argv);
 
-            var args = [].slice.call(arguments);
-            var options = args.pop();
-
-            var settings = {
-                root: options.root || '.',
-                template:options.template || 'seajs',
-                upgrade:options.upgrade || false
-            };
-
-            var init = require('./lib/init')(quick,settings);
-            init.start();
-        });
-};
+    var settings = {
+        root: program.root || '.',
+        template:program.template || 'seajs',
+        upgrade:program.upgrade || false
+    };
+    var init = require('./lib/init')(quick,settings);
+    init.start();
+}
+exports.register = enter;
