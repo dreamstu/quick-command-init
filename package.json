@@ -1,7 +1,7 @@
 {
     "name" : "quick-command-init",
     "description" : "quick init command.",
-    "version" : "0.0.4",
+    "version" : "0.0.5",
     "author" : "QuickJs Team <q@quickjs.org>",
     "homepage" : "http://q.quickjs.org/",
     "keywords": [ "q","quick","init" ],
